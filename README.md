@@ -5,7 +5,6 @@
 ```
 cd /var/www/nextcloud/themes
 git clone https://github.com/ochorocho/nextcloud-theme-tablogin.git tablogin
-
 ```
 
 Enable theme by adding `'theme' => 'tablogin',` in `config.php`.
