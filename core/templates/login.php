@@ -9,7 +9,7 @@ $alternateLogin = \OC::$server->getConfig()->getSystemValue('installed', false);
 <ul id="login-tabs" <?php if (!empty($_['alt_login'])) { ?>class="login-tabs"<?php } ?>>
     <li class="tabs">
         <?php if (!empty($_['alt_login'])) { ?>
-            <div class="title <?php echo $alternateLogin ?: 'active' ?>" data-tab="tab-login">
+            <div class="title <?php echo $alternateLogin ? '' : 'active' ?>" data-tab="tab-login">
                 <?php p($l->t('Standard'));?>
             </div>
             <div class="title <?php echo $alternateLogin ? 'active' : '' ?>" data-tab="tab-alternate-login">
@@ -18,7 +18,7 @@ $alternateLogin = \OC::$server->getConfig()->getSystemValue('installed', false);
         <?php } ?>
     </li>
     <li <?php if (!empty($_['alt_login'])) { ?>class="tabs-content"<?php } ?>>
-        <div id="tab-login" class="<?php echo $alternateLogin ?: 'active' ?>">
+        <div id="tab-login" class="<?php echo $alternateLogin ? '' : 'active' ?>">
             <div id="login"></div>
         </div>
         <?php if (!empty($_['alt_login'])) { ?>
